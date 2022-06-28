@@ -15,7 +15,7 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Phone Number</th>
-                    <th scope="col">CNIC</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -25,7 +25,7 @@
                     <tr>
                         <th scope="row"><%= customer.firstname %> <%= customer.lastname %></th>
                         <td><%= customer.phonenumber %></td>
-                        <td><%= customer.cnic %></td>
+                        <td><%= customer.email %></td>
                         <td>
                             <a href="/updateCustomer/<%= customer._id %>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
                             <a href="/deleteCustomer/<%= customer._id %>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
