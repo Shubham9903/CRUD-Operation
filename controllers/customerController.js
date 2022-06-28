@@ -19,7 +19,7 @@ const addCustomer = async (req, res, next) => {
         firstname: data.firstname,
         lastname: data.lastname,
         phonenumber: data.phonenumber,
-        cnic: data.cnic,
+        email: data.email,
         address: data.address
     });
     customer = await customer.save();
@@ -47,7 +47,7 @@ const updateCustomer = async(req, res, next) => {
         firstname: data.firstname,
         lastname: data.lastname,
         phonenumber: data.phonenumber,
-        cnic: data.cnic,
+        email: data.email,
         address: data.address
     }, {new: true});
     if(!customer) return res.status(404).send('Customer with the given id not found');

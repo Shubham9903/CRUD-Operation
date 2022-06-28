@@ -19,7 +19,7 @@ const customerSchema = new mongoose.Schema({
         minlength: 10,
         required: true
     },
-    cnic: {
+    email: {
         type: String,
         required: true
     }, 
@@ -36,7 +36,7 @@ const validateCustomer = (customer) => {
         firstname: Joi.string().min(3).max(50).required(),
         lastname: Joi.string().min(3).max(50).required(),
         phonenumber: Joi.string().min(10).required(),
-        cnic: Joi.string().required(),
+        email: Joi.string().required(),
         address: Joi.string().required()
     }
 
